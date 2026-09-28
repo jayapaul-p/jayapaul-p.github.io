@@ -3,7 +3,7 @@ name: Deploy Blazor WASM
 on:
   push:
     branches:
-      - main
+      - jp/feature/new-project
 
 permissions:
   contents: read
