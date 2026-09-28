@@ -3,7 +3,7 @@ name: Deploy Blazor WASM
 on:
   push:
     branches:
-      - jp/feature/new-project
+      - main
 
 permissions:
   contents: read
@@ -24,7 +24,7 @@ jobs:
           dotnet-version: 10.0.x
 
       - name: Publish
-        run: dotnet publish -c Release -o release
+        run: dotnet publish ./src/Portfolio/Portfolio.csproj -c Release -o release
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
